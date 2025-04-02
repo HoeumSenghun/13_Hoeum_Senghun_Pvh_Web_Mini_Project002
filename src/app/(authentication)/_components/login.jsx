@@ -1,14 +1,18 @@
 "use client";
+import { loginAction } from "@/actions/auth-action";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { KeyRound, Mail } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useActionState } from "react";
 
 export default function LoginComponent() {
+  
+  const [formData] = useActionState(loginAction, null);
+
   return (
-    <form className="space-y-6 bg-white">
+    <form className="space-y-6 bg-white" action={formData}>
       {/* email */}
       <div>
         <Label
