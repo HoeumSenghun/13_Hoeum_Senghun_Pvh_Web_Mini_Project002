@@ -1,8 +1,9 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import { loginService } from "./services/auth-service";
+import { loginService } from "./service/login-service";
 
-export const { auth, signOut, signIn } = NextAuth({
+
+export const { signIn, auth } = NextAuth({
   providers: [
     Credentials({
       credentials: {
@@ -11,11 +12,16 @@ export const { auth, signOut, signIn } = NextAuth({
       },
       authorize: async (credentials) => {
         const { email, password } = credentials;
-        const res = await loginService({ email, password });
+        const res = await loginService(
+          email, 
+          password,
+        );
+        console.log("res in auth.js :", res)
         return res;
       },
     }),
   ],
+  
   callbacks: {
     async jwt(token) {
       return token;
@@ -27,7 +33,4 @@ export const { auth, signOut, signIn } = NextAuth({
   },
   strategy: "jwt",
 
-  pages: {
-    signIn: "/login",
-  },
 });
