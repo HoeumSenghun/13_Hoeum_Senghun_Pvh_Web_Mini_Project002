@@ -16,6 +16,6 @@ export const loginAction = async  (formData) => {
     password,
     redirect: false,
   });
-  redirect("/")
+  redirect("/workspace")
 
 };
