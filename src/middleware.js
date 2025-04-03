@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "./auth";
 
 
+
 export async function middleware (req) {
     const session = await auth();
     
@@ -13,6 +14,5 @@ export async function middleware (req) {
 }
 
 export const config = {
-    matcher: ["/workspace/:path*", "/", "/favorite"],
-
+    matcher: ["/dashboard/:path*", "/", "/setting"],
 };
