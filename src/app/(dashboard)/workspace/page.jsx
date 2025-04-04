@@ -1,20 +1,13 @@
-"use client"
-
-import CardComponent from "@/components/card"
+import React from 'react'
 import { Star } from "lucide-react"
 
-
-function TodoTaskComponent({datas}) {
-  console.log("data received:",datas.payload?.status)
-
-  const tasks = datas?.payload || [];
- 
-    
+function page() {
   return (
-    <div className='container min-h-[600px]'>
+    <div className="bg-white">
+      <div className='container min-h-[600px]'>
       <div className="p-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">{}</h1>
+        <h1 className="text-2xl font-bold"></h1>
         <button className="rounded-full p-1 hover:bg-gray-100">
           <Star className="h-6 w-6 text-gray-400 hover:text-yellow-400" />
         </button>
@@ -27,10 +20,7 @@ function TodoTaskComponent({datas}) {
             <h2 className="text-lg font-medium text-[#F96666]">Not Started</h2>
           </div>
           <div className="mt-4 space-y-4">
-            {/* {notStartedTasks.map((task) => (
-              <TaskCard key={task.id} task={task} />
-            ))} */}
-            <CardComponent datas={{ payload: tasks.filter(task => task.status === "NOT_STARTED") }}/>
+            
           </div>
         </div>
 
@@ -40,10 +30,7 @@ function TodoTaskComponent({datas}) {
             <h2 className="text-lg font-medium text-[#4379F2]">In Progress</h2>
           </div>
           <div className="mt-4 space-y-4 ">
-            {/* {inProgressTasks.map((task) => (
-              <TaskCard key={task.id} task={task} />
-            ))} */}
-            <CardComponent datas={{ payload: tasks.filter(task => task.status === "IN_PROGRESS") }}/>
+            
           </div>
         </div>
 
@@ -53,16 +40,14 @@ function TodoTaskComponent({datas}) {
             <h2 className="text-lg font-medium text-[#009990]">Finished</h2>
           </div>
           <div className="mt-4 space-y-4 ">
-            {/* {finishedTasks.map((task) => (
-              <TaskCard key={task.id} task={task} />
-            ))} */}
-            <CardComponent datas={{ payload: tasks.filter(task => task.status === "FINISHED") }}/>
+            
           </div>
         </div>
       </div>
     </div>
     </div>
+    </div>
   )
 }
 
-export default TodoTaskComponent
+export default page

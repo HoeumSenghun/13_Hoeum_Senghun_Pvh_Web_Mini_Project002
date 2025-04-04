@@ -5,7 +5,7 @@ export async function workspaceService() {
       headers: {
         accept: "*/*",
         Authorization:
-          "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDM2NjM0NzcsImV4cCI6MTc0Mzc0OTg3N30.W2Ak6OyeF12Vfk_AKTuMCes1xwi6jBDDBvq-fPhVVlLGI3n-OdZIIq_-mWpsJlcJL96NsEHDUQCIGyxJrIJGnw",
+          "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDM3NDI4ODksImV4cCI6MTc0MzgyOTI4OX0.4PFvvDbBxQ1vGpa5k9QTClkuJg1xDTrvNWFPDz58xIiUIncZ3rB_2S2OdL6spFMQxn-5NZQcqrQlx6IhPs5wNA",
       },
     }
   );
