@@ -5,10 +5,10 @@ import Link from "next/link"
 function NavBarComponent({workspace}) {
   console.log(workspace)
   return (
-    <div className="container bg-yellow-300">
+    <div className="container">
       <header className="flex h-16 items-center justify-between bg-white px-6">
         {/* Breadcrumb Navigation */}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <Link href="/workspace" className="text-sm text-gray-600 hover:text-gray-900">
             Workspace
           </Link>
@@ -51,9 +51,9 @@ function NavBarComponent({workspace}) {
               /> */}
             </div>
             <div className="flex flex-col">
-              <span className="text-sm font-medium">Monster</span>
+              <span className="text-sm font-medium">Admin</span>
               <span className="text-xs text-gray-500">
-                blackmonster@gmail.com
+                admin@gmail.com
               </span>
             </div>
           </div>

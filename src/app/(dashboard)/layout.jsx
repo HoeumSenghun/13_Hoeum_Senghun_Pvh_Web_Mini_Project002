@@ -19,7 +19,7 @@ export default async function RootLayout({ children }) {
             <SidebarComponent  workspace={workspace}  /> 
           </div>
           <div className="container col-span-10 mx-auto">
-            <NavBarComponent workspace={workspace} />
+            <NavBarComponent />
             <div className="px-6">{children}</div>
           </div>
         </div>

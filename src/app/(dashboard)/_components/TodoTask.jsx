@@ -4,14 +4,15 @@ import CardComponent from "@/components/card"
 import { Star } from "lucide-react"
 
 
-function TodoTaskComponent({workspace}) {
-  console.log(workspace)
+function TodoTaskComponent({datas}) {
+  console.log("dataBosNh",datas)
+ 
     
   return (
     <div className='container min-h-[600px]'>
       <div className="p-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">HRD Design</h1>
+        <h1 className="text-2xl font-bold">{}</h1>
         <button className="rounded-full p-1 hover:bg-gray-100">
           <Star className="h-6 w-6 text-gray-400 hover:text-yellow-400" />
         </button>
@@ -21,13 +22,13 @@ function TodoTaskComponent({workspace}) {
         {/* Not Started Column */}
         <div>
           <div className="border-b-2 border-[#F96666] pb-2">
-            <h2 className="text-lg font-medium text-red-[#F96666]">Not Started</h2>
+            <h2 className="text-lg font-medium text-[#F96666]">Not Started</h2>
           </div>
           <div className="mt-4 space-y-4">
             {/* {notStartedTasks.map((task) => (
               <TaskCard key={task.id} task={task} />
             ))} */}
-            <CardComponent/>
+            <CardComponent datas={datas}/>
           </div>
         </div>
 
@@ -40,7 +41,7 @@ function TodoTaskComponent({workspace}) {
             {/* {inProgressTasks.map((task) => (
               <TaskCard key={task.id} task={task} />
             ))} */}
-            <CardComponent/>
+            <CardComponent datas={datas}/>
           </div>
         </div>
 
@@ -53,7 +54,7 @@ function TodoTaskComponent({workspace}) {
             {/* {finishedTasks.map((task) => (
               <TaskCard key={task.id} task={task} />
             ))} */}
-            <CardComponent/>
+            <CardComponent datas={datas}/>
           </div>
         </div>
       </div>

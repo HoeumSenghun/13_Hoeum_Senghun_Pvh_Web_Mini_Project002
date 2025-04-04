@@ -4,8 +4,9 @@ import Link from "next/link";
 import Logo from "@/components/logo";
 
 function SidebarComponent({ workspace }) {
+  console.log("sidebarrrr",workspace.payload)
   return (
-    <div className="container ">
+    <div className="container bg-gray-200">
       <div className="flex h-screen w-60 flex-col p-4">
         <Logo />
 
@@ -21,7 +22,7 @@ function SidebarComponent({ workspace }) {
             {workspace?.payload?.map((items) => (
               <li key={items.id}>
                 <Link
-                  href="/workspace"
+                  href={`/workspace/${items.workspaceId}`}
                   className="flex items-center justify-between rounded-md py-2 hover:bg-gray-50"
                 >
                   <div className="flex items-center">
@@ -50,7 +51,7 @@ function SidebarComponent({ workspace }) {
             workspace?.payload?.filter(items=> items.isFavorite).map(items =>(
                 <li>
                 <Link
-                  href="#"
+                  href={`/workspace/${items.workspaceId}`}
                   className="flex items-center justify-between rounded-md py-2 hover:bg-gray-50"
                 >
                   <div className="flex items-center">
