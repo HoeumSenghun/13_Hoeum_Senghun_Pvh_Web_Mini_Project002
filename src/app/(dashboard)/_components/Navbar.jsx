@@ -2,8 +2,10 @@ import React from "react";
 import { Bell } from "lucide-react"
 import Link from "next/link"
 
-function NavBarComponent({workspace}) {
+function NavBarComponent({workspace, params}) {
   console.log(workspace)
+  console.log(params)
+  
   return (
     <div className="container">
       <header className="flex h-16 items-center justify-between bg-white px-6">
@@ -32,7 +34,7 @@ function NavBarComponent({workspace}) {
             href="#"
             className="relative text-sm font-medium text-blue-600 hover:text-blue-800"
           >
-            {/* {workspace?.payload?.workspaceName} */}HRD Design
+            {/* {workspace?.payload?.workspaceName} */}HRD
             <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-blue-600"></span>
           </Link>
         </div>

@@ -6,6 +6,7 @@ import { Star } from "lucide-react"
 
 function TodoTaskComponent({datas}) {
   console.log("data received:",datas.payload?.status)
+  console.log("title datasssssssssssssssssssssssssssssssss:",datas)
 
   const tasks = datas?.payload || [];
  
@@ -14,7 +15,7 @@ function TodoTaskComponent({datas}) {
     <div className='container min-h-[600px]'>
       <div className="p-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">{}</h1>
+        <h1 className="text-2xl font-bold">{datas?.tasktitle}</h1>
         <button className="rounded-full p-1 hover:bg-gray-100">
           <Star className="h-6 w-6 text-gray-400 hover:text-yellow-400" />
         </button>

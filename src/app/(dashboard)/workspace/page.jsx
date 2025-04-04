@@ -12,7 +12,7 @@ function page() {
           <Star className="h-6 w-6 text-gray-400 hover:text-yellow-400" />
         </button>
       </div>
-
+        
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
         {/* Not Started Column */}
         <div>
