@@ -16,7 +16,6 @@ export default function AuthenticationLayout({ children }) {
         <div className="container mx-auto my-12">
           <Logo />
         </div>
-
         {children}
       </body>
     </html>

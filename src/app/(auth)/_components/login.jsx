@@ -1,14 +1,19 @@
 "use client";
+import { loginAction } from "@/actions/login-action";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { KeyRound, Mail } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import { useActionState } from "react";
 
 export default function LoginComponent() {
+
+  const [ formAction ] = useActionState(loginAction, null);
+  
+
   return (
-    <form className="space-y-6 bg-white">
+    <form action={loginAction} className="space-y-6 bg-white">
       {/* email */}
       <div>
         <Label
@@ -18,7 +23,8 @@ export default function LoginComponent() {
           <Mail size={20} /> Email
         </Label>
 
-        <Input
+        <input
+          name="email"
           type="text"
           placeholder="Please type your email"
           className={`bg-ghost-white py-2.5 px-4 rounded-lg w-full text-light-steel-blue/90`}
@@ -34,7 +40,8 @@ export default function LoginComponent() {
           <KeyRound size={20} /> Password
         </Label>
 
-        <Input
+        <input
+          name="password"
           type="password"
           placeholder="Please type your password"
           className={`bg-ghost-white py-2.5 px-4 rounded-lg w-full text-light-steel-blue/90`}
